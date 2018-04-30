@@ -1,0 +1,2 @@
+## Basic Java implementation of a Blackjack game
+I've never previously coded in Java, so this was a very interesting challenge. The very basic rules of the game are implemented, with only 3 main moves supported: Hit, Stand and Surrender.
