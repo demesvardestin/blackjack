@@ -19,11 +19,11 @@ public class Bot {
     Bet bet_ = new Bet();
     
     if (player1 > 21 || playerbot == 21) {
-      System.out.println("You lose against the system, for a total of "+wager);
+      System.out.println("You lose against the system, for a wager total of $"+wager);
       System.exit(1);
     }
     if (playerbot > 21 || (player1 > playerbot && playerbot > 17)) {
-      System.out.println("You win against the system, for a total of "+wager);
+      System.out.println("You win against the system, for a wager total of $"+wager);
       System.exit(1);
     }
     if (lastPlayer == "player1") {
@@ -32,7 +32,7 @@ public class Bot {
         playerbot += play;
       }
     }
-    System.out.println("The system now has a total of "+playerbot);
+    System.out.println("The system now has a card total of "+playerbot);
     bet_.Move(play, player1, playerbot, bot, con, deck_.Fill(), wager);
   }
 }

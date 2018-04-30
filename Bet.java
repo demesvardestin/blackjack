@@ -14,10 +14,10 @@ public class Bet {
     // Dealing first hand
     play = bot.Generate(d);
     player1 += play;
-    System.out.println("You now have a total of "+player1);
+    System.out.println("Starting wager is $"+wager+"\nYou now have a card total of "+player1);
     play = bot.Generate(d);
     playerbot += play;
-    System.out.println("The system now has a total of "+playerbot);
+    System.out.println("The system now has a card total of "+playerbot);
     _bet.Move(play, player1, playerbot, bot, con, d, wager);  
   }
   
@@ -35,15 +35,15 @@ public class Bet {
     // Analyzing the move
     switch(move.toLowerCase()) {
       case "stand":
-        System.out.println("You chose to stand with your total of "+player1);
+        System.out.println("You chose to stand with your card total of "+player1);
         bot.NextMove("player1", play, playerbot, player1, bot, con, wager);
         break;
       case "hit":
         wager += 10;
-        System.out.println("You chose 'hit me'. Your total wager is now "+wager);
+        System.out.println("You chose 'hit me'. Your total wager is now $"+wager);
         play = bot.Generate(d);
         player1 += play;
-        System.out.println("You now have a total of "+player1);
+        System.out.println("You now have a card total of "+player1);
         bot.NextMove("player1", play, playerbot, player1, bot, con, wager);
         break;
       case "surrender":
