@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Deck {
   public Deck() {
-    
+    ArrayList<Element> arrayList = new ArrayList<Element>(Arrays.asList([1,2,3,4,5,6,7,8,9,10]));
   }
   
   public ArrayList Fill() {
